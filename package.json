@@ -2,6 +2,9 @@
     "name": "next-scaffold",
     "version": "0.1.0",
     "private": true,
+    "description": "Boilerplate Nextjs + Typescript + Testing library + Styled components + Eslint + Commitlint",
+    "homepage": "https://github.com/diogobiz/next-scaffold#readme",
+    "author": "Diogo Biz <diogo-biz@hotmail.com>",
     "scripts": {
         "dev": "next dev",
         "build": "next build",

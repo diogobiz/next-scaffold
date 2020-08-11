@@ -1,16 +1,16 @@
 import Head from "next/head";
 
-import { Box } from "pages/components/Box";
+import { Box } from "components/Box";
 
 export default function Home() {
-  return (
-    <Box>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    return (
+        <Box>
+            <Head>
+                <title>Create Next App</title>
+                <link rel='icon' href='/favicon.ico' />
+            </Head>
 
-      <Box as="main">Hello Diogo</Box>
-    </Box>
-  );
+            <Box as='main'>Hello Diogo</Box>
+        </Box>
+    );
 }

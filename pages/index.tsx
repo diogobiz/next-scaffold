@@ -1,6 +1,6 @@
-import Head from "next/head";
+import Head from 'next/head';
 
-import { Box } from "components/Box";
+import { Box } from 'components/Box';
 
 export default function Home() {
     return (

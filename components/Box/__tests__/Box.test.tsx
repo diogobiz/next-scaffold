@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import { render } from "@testing-library/react";
+import { render } from '@testing-library/react';
 
-import { Box } from "../Box";
+import { Box } from '../Box';
 
-const text = "Its a box";
+const text = 'Its a box';
 
-it("should render Header", () => {
+it('should render Header', () => {
     const { getByText } = render(<Box>{text}</Box>);
     expect(getByText(text)).toBeTruthy();
 });

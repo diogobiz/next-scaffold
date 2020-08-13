@@ -1,4 +1,9 @@
-import Document, { DocumentContext } from 'next/document';
+import Document, {
+    DocumentContext,
+    Head,
+    Main,
+    NextScript,
+} from 'next/document';
 
 import { ServerStyleSheet } from 'styled-components';
 
@@ -27,5 +32,26 @@ export default class MyDocument extends Document {
         } finally {
             sheet.seal();
         }
+    }
+
+    render() {
+        return (
+            <html>
+                <Head>
+                    <link
+                        href='https://fonts.googleapis.com/css?family=Nunito+Sans:400,500,600,700'
+                        rel='stylesheet'
+                    />
+                    <link rel='stylesheet' type='text/css' href='/global.css' />
+                    <link
+                        rel='stylesheet'
+                        type='text/css'
+                        href='/normalize.css'
+                    />
+                </Head>
+                <Main />
+                <NextScript />
+            </html>
+        );
     }
 }

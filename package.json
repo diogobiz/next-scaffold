@@ -11,7 +11,8 @@
         "start": "next start",
         "test": "jest --watch",
         "coverage": "jest --coverage",
-        "lint:fix": "eslint . --fix"
+        "lint:fix": "eslint . --fix",
+        "heroku-postbuild": "yarn build"
     },
     "dependencies": {
         "next": "9.5.2",

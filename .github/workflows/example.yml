@@ -1,0 +1,50 @@
+name: Example
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build_and_test:
+    name: Build and test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Commit assets
+        uses: EndBug/add-and-commit@v5
+        if: ${{github.ref == 'refs/heads/master'}}
+        with:
+          message: "Commit assets: ${{github.event.head_commit.message}}"
+
+  build_and_test2:
+    name: Build and test2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Commit assets
+        uses: EndBug/add-and-commit@v5
+        with:
+          message: "Commit assets: ${{github.event.head_commit.message}}"
+
+  deploy1:
+    name: Deploy
+    runs-on: ubuntu-latest
+    needs: build_and_test
+    if: ${{github.ref == 'refs/heads/master'}}
+    steps:
+      - name: Deploy Web Service - Staging
+        run: echo "deploy1 with IF, only in master"
+
+  deploy2:
+    name: Deploy
+    runs-on: ubuntu-latest
+    needs: build_and_test
+    steps:
+      - name: Deploy Web Service - Staging
+        run: echo "deploy2 without IF"

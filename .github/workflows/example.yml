@@ -47,4 +47,4 @@ jobs:
     needs: build_and_test2
     steps:
       - name: Deploy Web Service - Staging
-        run: echo "deploy2 without IF"
+        run: echo "deploy2 without IF."

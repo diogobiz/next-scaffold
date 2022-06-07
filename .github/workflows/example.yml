@@ -36,7 +36,7 @@ jobs:
     name: Deploy1
     runs-on: ubuntu-latest
     needs: build_and_test
-    if: ${{github.ref == 'refs/heads/master' || github.ref == 'refs/heads/staging'}}
+    if: ${{github.ref == 'refs/heads/staging'}}
     steps:
       - name: Deploy Web Service - Staging
         run: echo "deploy1 with IF, only in master."

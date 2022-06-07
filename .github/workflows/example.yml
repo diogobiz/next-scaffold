@@ -41,7 +41,7 @@ jobs:
       - name: Deploy Web Service - Staging
         run: |
           echo "deploy1 with IF, only in master."
-          echo github.ref
+          echo "github.ref"
 
   deploy2:
     name: Deploy2

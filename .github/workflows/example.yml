@@ -39,7 +39,7 @@ jobs:
     if: ${{github.ref == 'refs/heads/master'}}
     steps:
       - name: Deploy Web Service - Staging
-        run: echo "deploy1 with IF, only in master"
+        run: echo "deploy1 with IF, only in master."
 
   deploy2:
     name: Deploy
